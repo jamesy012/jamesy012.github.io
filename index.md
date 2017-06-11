@@ -2,21 +2,11 @@
 layout: default
 ---
 
+## James's programming github pages site
 
- <h1> test 1 Header 1 </h1>
- # [](#header-1) test 2 Header 1
+### under construction
 
-<p> js test </p>
-	
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+[Link to second page.](Usefull-Links)
 
-[Test link](Usefull-Links)
-
-... Test Duck
+for the time being, here is a duck a drew
 ![Duck image]({{ site.url }}/assets/images/myDuck.png)
