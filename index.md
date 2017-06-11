@@ -26,12 +26,14 @@ var fun = function lang(l) {
 ```
 
 ... Test List
-![Test link]({{ site.url }}Usefull_Links.html)
+[Test link]({{ site.url }}Usefull_Links.html)
 
 <p>
 Link Test 2
 [Link to another page](Usefull_Links).
 </p>
+
+<a herf {{ site.url }}Usefull_Links.html> link Test 3</a>
 
 ... Test Duck
 ![Duck image]({{ site.url }}/assets/images/myDuck.png)
