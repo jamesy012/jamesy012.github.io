@@ -25,10 +25,7 @@ var fun = function lang(l) {
 }
 ```
 
-[Test link]({{ site.url }}/Usefull_Links.md)
+[Test link](Usefull-Links)
 
 ... Test Duck
 ![Duck image]({{ site.url }}/assets/images/myDuck.png)
-
-</body>
-</html>
