@@ -2,7 +2,7 @@
 layout: default
 ---
 <dl>
-<script src="script.js"></script>
+<script src="{{site.url}}/Experiments/Clicker/script.js"></script>
 
 <h1>Your click amount is:<input type="text" disabled="true" name="TextBox" id="TextBox" value="0" /></h1>
 <h1> <a class="button"  id='AddButton' value="+" href="#"><i class="fa fa-plus"></i></a></h1>
