@@ -2,10 +2,6 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html>
-<body>
-
 {% highlight c# linenos %}
 			//ofofd.AcceptFiles = false;
 			//ofofd.RootFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
