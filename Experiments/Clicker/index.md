@@ -2,6 +2,7 @@
 layout: default
 ---
 <dl>
+<script src="//code.jquery.com/jquery-1.4.3.min.js"></script>
 <script src="{{site.url}}/Experiments/Clicker/script.js"></script>
 
 <h1>Your click amount is:<input type="text" disabled="true" name="TextBox" id="TextBox" value="0" /></h1>
