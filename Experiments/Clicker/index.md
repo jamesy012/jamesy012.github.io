@@ -19,6 +19,11 @@ layout: default
 		</h1>
 </div>
 
+<!-- buttons seem to take up abit of space -->
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 
@@ -46,6 +51,11 @@ layout: default
 
 </div>
 
+<!-- buttons seem to take up abit of space -->
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 
