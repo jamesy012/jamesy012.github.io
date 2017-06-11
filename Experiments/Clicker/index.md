@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<dl>
 <script src="script.js"></script>
 
 <h1>Your click amount is:<input type="text" disabled="true" name="TextBox" id="TextBox" value="0" /></h1>
@@ -68,11 +69,4 @@ layout: default
     });
 </script>
 
-
-
-				
-				
-				</div>
-			</div>
-		</div>
-	</div>
+</dl>
