@@ -9,16 +9,17 @@ layout: default
 <!-- Clicker -->
 <div>
 	<!-- Click Text -->
-		<h1>Your click amount is: </h1>
-	<!-- Click Amount -->
-		<input type="text" disabled="true" name="TextBox" id="TextBox" value="0" />
-		<br>
+		<h1>Your click amount is:
+			<!-- Click Amount -->
+				<input type="text" disabled="true" name="TextBox" id="TextBox" value="0" />
+		</h1>
 	<!-- Click Button -->
 		<h1> 
 			<a class="button" id='AddButton' href="#">Click</a>
 		</h1>
 </div>
 
+<br>
 <br>
 
 <!-- Upgrade -->
@@ -29,6 +30,7 @@ layout: default
 			<!-- Upgrade Cost Amount -->		
 				<input type="text" disabled="true" name="TextBox3" id="TextBox3" value="10" />
 		</h2>
+		<br>
 	<!-- Upgrade Amount Per Click Text -->
 		<h2>
 			<a id = "text2">Clicks per click:</a>
@@ -39,10 +41,12 @@ layout: default
 
 <!-- Upgrade Button -->
 	<h1>
-		<a class="button"  id='AddClick' value="+" href="#"><i class="fa fa-plus">UPGRADE</i></a>
+		<a class="button"  id='AddClick' href="#">UPGRADE</a>
 	</h1>
 
 </div>
+
+<br>
 <br>
 
 <!-- Change Upgrade (Currently useless) -->
