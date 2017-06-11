@@ -29,5 +29,11 @@ var fun = function lang(l) {
 }
 ```
 
+... Test List
+![Test link]({{ site.url }}Usefull_Links.html)
+
+... Test Duck
+![Duck image]({{ site.url }}/assets/images/myDuck.png)
+
 </body>
 </html>
