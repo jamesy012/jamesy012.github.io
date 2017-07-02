@@ -2,33 +2,33 @@
 layout: default
 ---
 
+
 ## James' programming Github pages site
 
 Currently under construction.
 
-
-Known languages:
-(todo: link to pages listing projects)
-
-* C++
-  * Open GL
-* C#
-  * Unity
-  * Forms
-* Java
-  * Games using Swing
-  * Android
-
-
-
 ### [Link to second page.](Usefull-Links)
 
+### [About me.](about)
 
+<br>
+
+<table >
+	<tr>
+		<th>_TEST_1</th>
+		<th>_TEST_</th>
+		<th>_TEST_</th>
+	</tr><tr>
+		<th>_TEST_2</th>
+		<th>_TEST_</th>
+	</tr>
+	<tr>
+		<th>_TEST_3</th>
+	</tr>
+</table>
+
+<br>
 
 For the time being, here is a duck I drew.
-![Duck image]({{ site.url }}/assets/images/myDuck.png)
+![Duck image](/assets/images/myDuck.png)
 Quack Quack.
-
-
-
-[js clicker](Experiments\Clicker\index)
