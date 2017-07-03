@@ -1,5 +1,7 @@
 .pTab {
-	padding-left:2em
+	padding-left:2em;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
 }
 
 .normal {
@@ -7,4 +9,8 @@
 	background: unset;
 	margin-bottom: unset;
 	padding: unset;
+}
+ul {
+    padding-left: 40px;
+    margin-bottom: 0px;
 }

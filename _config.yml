@@ -23,8 +23,8 @@ description: >
   Currently under development.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jamesy012
-github_username:  jamesy012
+twitter_username: Jamesy012
+github_username:  Jamesy012
 github.repository_name: test
 
 # Build settings
