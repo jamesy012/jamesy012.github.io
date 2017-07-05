@@ -1,6 +1,7 @@
 
 div.imageOverlap {
     position: relative;
+    margin-bottom: 5px;
 }
 
 img.imageOverlap {
@@ -27,3 +28,22 @@ p.imageOverlap {
 div.imageOverlap:hover p{
     opacity:1;
 }
+
+
+div #leftSide{
+    float: left;
+    position: relative;
+    width: 49%;
+}
+
+div #rightSide{
+    float: right;
+    position: relative;
+    width: 49%;
+}
+
+
+div #sampleHolder{
+    overflow: auto;
+}
+
