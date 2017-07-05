@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="/assets/css/projectPages.css">
+
+<!-- i dont reall like this, perhaps just a link back to a general projects page? -->
+<section id="Links" class="clearfix">
+	<a href="" class="button" onclick="goBack()">Go Back</a>
+    <center>
+	<h1 style="padding-right:3.5em"> Project Page </h1>
+    </center>
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+	
+</section>
+
+<hr>
+
+<div id="ProjectPage">
+    <div id="ProjectName">
+        <h2> Project: {{ page.project.name | default: 'project name undefined' }}. </h2>
+    </div>
+
+    
+	<div id="Description">
+        <h2 class="pTab"> Description: </h2>
+        <p>
+		  {{ page.project.description | default: 'project description undefined' }}
+        </p>
+    </div>
+    
+    <div id="myContributions">
+        {% if page.project.myContributions | default:blank != blank %}
+            <h2 class="pTab"> My Contributions: </h2>
+            <p>
+                {{ page.project.myContributions }}
+            </p>
+            {% endif %}
+    </div>
+    
+	<div id="Images">
+        {% if page.project.images | default:blank != blank %}
+            <h2 class="pTab"> Images/Gifs: </h2>	
+            {% for item in page.project.images %}
+                <div id="ProjectExampleImage">
+                    <center>
+                    <img src="/assets/projects/{{ item.loc }}" alt="{{item.alt}}" onError="style.display = 'none'; console.log('unable to load image {{ item.loc }}');">
+                    </center>
+                    {% if item.desc | default:blank != blank %}
+                        <p>
+                            {{item.desc}}
+                        </p>
+                        {% endif %}
+                </div>        
+            {% endfor %}
+        {% endif %}
+	</div>
+	
+	<div id="Videos">
+        {% if page.project.videos | default:blank != blank %}
+            <h2 class="pTab"> Videos: </h2>	
+            {% for item in page.project.videos %}
+                <div id="ProjectExampleVideo">
+                    {% if item.url | default:blank != blank %}
+                        <!-- has to be a better way to do this -->
+                        {% if item.type == 'youtube' %}
+                            <iframe width="100%" height="350px" src="https://www.youtube.com/embed/{{item.url}}" frameborder="0" allowfullscreen></iframe>
+                        {% endif %}
+                        {% if item.type == 'vimeo' %}
+                            <iframe src="https://player.vimeo.com/video/{{item.url}}" width="100%" height="350px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        {% endif %}
+                        {% if item.desc | default:blank != blank %}
+                            <p>
+                                {{item.desc}}
+                            </p>
+                        {% endif %}
+                    {% endif %}
+                </div>        
+            {% endfor %}
+        {% endif %}
+	</div>
+    
+    <div id="Languages">
+        {% if page.project.languages | default:blank != blank %}
+            <h2 class="pTab"> Languages: </h2>
+            <ul>
+                {% for item in page.project.languages %}
+                    <li>{{ item.text }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    
+    <div id="Other Contributors">        
+        {% if page.project.contributors | default:blank != blank %}
+            <h2 class="pTab"> Contributors: </h2>
+            {% for item in page.project.contributors %}
+            <p>Discipline: {{item.taskName}}</p>
+                <ul>
+                    {% for item in item.contrib %}
+                        <ul>
+                            <li>
+                                {{item.name}}:
+                                {% if item.url | default:blank != blank %}
+                                    <a href="{{item.url}}">Link.</a>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        {% endif %}
+	</div>
+    
+    <div id="Links">        
+        {% if page.project.links | default:blank != blank %}
+            <h2 class="pTab"> Links: </h2>
+            <ul>
+                {% for item in page.project.links %}
+                    <li>{{ item.text }}: <a href="{{item.url}}">Link.</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+	</div>
+    
+    <div id="similar projects">
+        {% if page.project.other | default:blank != blank %}
+            <h2 class="pTab"> Other: </h2>
+            <ul>
+                {% for item in page.project.other %}
+                    <li>{{ item.text }}: <a href="\pages\Projects\{{item.url}}">Link.</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</div>
