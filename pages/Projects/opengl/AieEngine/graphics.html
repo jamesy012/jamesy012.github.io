@@ -2,15 +2,22 @@
 layout: default
 
 project:
- name: Aie OpenGL Engine - Graphics
+ name: OpenGL Engine - Graphics
  description: >
-  Basic description about the OpenGL engine I made for the graphics unit at AIE<br>
-  It's on bitbucket.
+  For the 2nd year at AIE we had to do a engine in OpenGL that requried
+  <ul>
+      <li>Model loading</li>
+      <li>Model Animation</li>
+      <li>Gpu Shaders</li>
+      <li>Post Processing</li>
+      <li>Frustum culling</li>
+  </ul>
+  Extra
  links:
   - text: Project/Source
     url: https://bitbucket.org/jamesy012/aieopengl
-  - text: Download
-    url: https://bitbucket.org/jamesy012/aieopengl
+ #- text: Download
+ #  url: https://bitbucket.org/jamesy012/aieopengl
  other:
   - text: Lua addition
     url: opengl\AieEngine\lua
@@ -35,6 +42,10 @@ project:
     desc: 
      Directional light coming from the flying box towards the origin<br>
      Demonstrates the inspector and transform class I made that allows parenting, translation,rotation and scale
+  - loc: opengl/Postprocessing.png
+    alt: before and after a distortion pp effect
+    desc: 
+     simple distortion shader being applied to the screen affecting the 3 spheres
 ---
 
 {% include project.html %}
