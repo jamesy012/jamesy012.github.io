@@ -37,3 +37,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
 github: [metadata]
+google_analytics: UA-102257901-1
