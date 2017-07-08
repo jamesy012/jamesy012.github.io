@@ -49,7 +49,11 @@ ul {
 }
 
 
-p {
+p, h2, h3 {
     padding-left: 1em;
     margin-bottom: 10px;
+}
+
+.removePadding {
+    padding: initial;
 }

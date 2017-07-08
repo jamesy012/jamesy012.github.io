@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/assets/css/projectPages.css">
-
 <!-- i dont reall like this, perhaps just a link back to a general projects page? -->
 <section id="Title" class="clearfix">
 	<a href="" class="button" onclick="goBack()">Go Back</a>
@@ -65,8 +64,7 @@
                         <!-- has to be a better way to do this -->
                         {% if item.type == 'youtube' %}
                             <iframe width="100%" height="350px" src="https://www.youtube.com/embed/{{item.url}}" frameborder="0" allowfullscreen></iframe>
-                        {% endif %}
-                        {% if item.type == 'vimeo' %}
+                        {% elsif item.type == 'vimeo' %}
                             <iframe src="https://player.vimeo.com/video/{{item.url}}" width="100%" height="350px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         {% endif %}
                         {% if item.desc | default:blank != blank %}

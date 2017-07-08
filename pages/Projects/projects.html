@@ -1,6 +1,36 @@
 ---
 layout: default
+#Move to a yml in the _Data folder????
+projects:
+ current:
+  - name: New OpenGL engine
+    url: opengl/openglEngine
+    status: Nowhere near done
+  - name: Git Ignore editor
+    status: Mostly done
+  - name: Unity Car shooter Game
+    status: Nowhere near done
+  - name: Direct Input DLL for use with unity
+    status: some troubles encounted, working on a fix
+ list:
+  - name: C++
+    data:
+     - name: OpenGL engine with AIE
+       url: opengl/AieEngine/graphics
+  - name: Unity
+    data:
+     - name: Turn based strategy game
+  - name: Game Jam's
+    data:
+     - name: Grow with AIE
+       url: gamejams/aie_Grow
+     - name: Ludum dare 38
+       url: gamejams/ludumDare38
+     - name: Ludum dare 37
+       url: gamejams/ludumDare37
 ---
+
+
 
 <section id="Title" class="clearfix">
     <center>
@@ -10,7 +40,41 @@ layout: default
 </section>
 <hr>
 <div>
-    Currently under development.
+
+    <h2>Currently working on:</h2>
+    
+    <ul>        
+        {% for item in page.projects.current %}
+            <li>
+                 {{item.name}}:
+                 {% if item.url %}
+                    <a href="/pages/Projects/{{item.url}}">Link</a>
+                {% endif %}
+                <ul> 
+                    {% if item.status %}
+                        Status: {{item.status}}.
+                    {% endif %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
     <br>
-    Sorry.
+    <h2>Other projects (Completed or put on hold):</h2>
+    <br>
+    <ul>
+        {% assign listItems = page.projects.list | sort: 'name' %}
+        {% for item in listItems %}
+            <li> <h2 class="removePadding">{{item.name}}</h2></li>
+            <ul>    
+                {% for data in item.data %}
+                <li>
+                    {{ data.name }}:
+                    {% if data.url %}
+                    <a href="/pages/Projects/{{data.url}}">Link</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
 </div>
