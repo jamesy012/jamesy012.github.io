@@ -5,21 +5,28 @@ projects:
  current:
   - name: New OpenGL engine
     url: opengl/openglEngine
-    status: Nowhere near done
+    status: Implementing basics
   - name: Git Ignore editor
     status: Mostly done
   - name: Unity Car shooter Game
-    status: Nowhere near done
+    status: Just started
   - name: Direct Input DLL for use with unity
-    status: some troubles encounted, working on a fix
+    status: Working dll, with unity implementation<br>
+     might add XInput for xbox controllers
  list:
   - name: C++
     data:
      - name: OpenGL engine with AIE
        url: opengl/AieEngine/graphics
+     - name: Phusdo 3d
+       url: cpp/aie_Phusdo3dv2
+     - name: New OpenGL engine
+       url: opengl/openglEngine
+     - name: Direct Input DLL for use with unity
   - name: Unity
     data:
      - name: Turn based strategy game
+     - name: Unity Car shooter Game
   - name: Game Jam's
     data:
      - name: Grow with AIE
@@ -28,6 +35,12 @@ projects:
        url: gamejams/ludumDare38
      - name: Ludum dare 37
        url: gamejams/ludumDare37
+  - name: Android (Java)
+    data:
+     - name: Ants Nest
+  - name: C#
+    data:
+     - name: Git Ignore editor
 ---
 
 
@@ -59,7 +72,7 @@ projects:
         {% endfor %}
     </ul>
     <br>
-    <h2>Other projects (Completed or put on hold):</h2>
+    <h2>Other projects:</h2>
     <br>
     <ul>
         {% assign listItems = page.projects.list | sort: 'name' %}
