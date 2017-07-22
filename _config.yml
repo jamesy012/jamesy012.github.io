@@ -19,8 +19,8 @@ email: Jamesy012.Dev@gmail.com
 #  Write an awesome description for your new site here. You can edit this
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
-description: >
-  Bunch of Applications/Programs I have worked on.
+description:
+  Applications/Programs I have worked on. with some added flourish! ;) 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Jamesy012
@@ -33,6 +33,7 @@ theme: jekyll-theme-tactile
 repository: jamesy012/jamesy012.github.io
 gems:
   - jekyll-feed
+  - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock

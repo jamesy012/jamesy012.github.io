@@ -27,6 +27,15 @@ footer {
     }
 
 
+img.DuckImage {
+    position: absolute;
+    width: 32x;
+    height: 32px;
+    padding-left: 6px;
+    margin-top: -8px;
+}
+
+
 table, th, td {
     padding: 2px;
 	table-layout: fixed;
@@ -48,7 +57,7 @@ ul {
     border: 2px solid rgba(0,0,0,0.1);
     border-top-style: none;
     */
-    width: 725px;
+    width: 750px;
 }
 
 

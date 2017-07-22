@@ -40,7 +40,7 @@
    pData:
     pName: AIEOpenGL
     pPath: opengl/AieEngine/graphics
-   smallDesc: A OpenGL graphics engine I made for the graphics unit at AIE.<br>
+   smallDesc: A OpenGL game engine I made for the graphics unit at AIE.<br>
     It is a Lib, with Lua bindings and Physics that can be used with this. 
    description: 
     For the 2nd year at AIE we had to do a engine in OpenGL that requried
@@ -93,6 +93,8 @@
    pData:
     pName: AIEOpenGLLua
     pPath: opengl/AieEngine/lua
+   smallDesc:
+    Lua Lib as an extension of the game engine I made, You can do almost everything in lua that the engine is capable of.
    description: 
     I Implemented Lua bindings into my C++ engine,<br>
     <p>In Lua you can:</p>
@@ -228,6 +230,8 @@
     pName: AieGameJamGrow
     pPath: gamejams/aie_Grow
     pGameJam: yes
+   smallDesc: >
+    A game made in 3 days with another programmer :computer: and 2 artist :art: during AIE hours. 
    description: 
     Before starting our major production game unit, we had a small game jam for groups which had their pitch video's ready<br>
     we made this in two days<br>
@@ -311,6 +315,8 @@
     pName: LD38
     pPath: gamejams/ludumDare38
     pGameJam: yes
+   smallDesc: >
+    A small game for a small world, save the inhabitants, or smash metrorrs into them :+1:
    description: 
     The game I made in 72 hours with a friend for the Ludum dare compo.<br>
     we are both sorta split between the work.<br><br>
@@ -385,8 +391,9 @@
      
 - project:
    name: Ants Nest
-   smallDesc: A game I made with a lecturer at Deakin University.<br>
+   smallDesc: A game I made as a collaboration with a lecturer at Deakin University.<br>
     It's a simulation of a nest of ants,
-    I did all the programming.
+    It is a continuation from a Java app I made which simulated a group of people.<br>
+    We plan to put it on the play store.
    languages:
     - text: Java (Android)
