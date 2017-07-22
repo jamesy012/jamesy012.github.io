@@ -15,32 +15,50 @@
 
 <hr>
 
+{% comment %}
+    Find the project, and set up currProject to have it's data
+{% endcomment %}
+{% assign currProject = false %}
+    {% for item in site.data.projects %}
+        {% if item.project.pData.pName == page.projectName %}
+            {% assign currProject = item.project %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+{% if currProject == false %}
+    <p>
+        There has been an error finding the project information, sorry about any inconvenience.
+    </p>
+  {% break %}
+{% endif %}
+
+
 <div id="ProjectPage">
     <div id="ProjectName">
-        <h2> Project: {{ page.project.name | default: 'project name undefined' }}. </h2>
+        <h2> Project: {{ currProject.name | default: 'project name undefined' }}. </h2>
     </div>
 
     
 	<div id="Description">
         <h2 class="pTab"> Description: </h2>
         <p>
-		  {{ page.project.description | default: 'project description undefined' }}
+		  {{ currProject.description | default: 'project description undefined' }}
         </p>
     </div>
     
     <div id="myContributions">
-        {% if page.project.myContributions | default:blank != blank %}
+        {% if currProject.myContributions | default:blank != blank %}
             <h2 class="pTab"> My Contributions: </h2>
             <p>
-                {{ page.project.myContributions }}
+                {{ currProject.myContributions }}
             </p>
             {% endif %}
     </div>
     
 	<div id="Images">
-        {% if page.project.images | default:blank != blank %}
+        {% if currProject.images | default:blank != blank %}
             <h2 class="pTab"> Images/Gifs: </h2>	
-            {% for item in page.project.images %}
+            {% for item in currProject.images %}
                 <div id="ProjectExampleImage">
                     <center>
                     <img src="/assets/projects/{{ item.loc }}" alt="{{item.alt}}" onError="style.display = 'none'; console.log('unable to load image {{ item.loc }}');">
@@ -56,9 +74,9 @@
 	</div>
 	
 	<div id="Videos">
-        {% if page.project.videos | default:blank != blank %}
+        {% if currProject.videos | default:blank != blank %}
             <h2 class="pTab"> Videos: </h2>	
-            {% for item in page.project.videos %}
+            {% for item in currProject.videos %}
                 <div id="ProjectExampleVideo">
                     {% if item.url | default:blank != blank %}
                         <!-- has to be a better way to do this -->
@@ -79,10 +97,10 @@
 	</div>
     
     <div id="Languages">
-        {% if page.project.languages | default:blank != blank %}
+        {% if currProject.languages | default:blank != blank %}
             <h2 class="pTab"> Languages: </h2>
             <ul>
-                {% for item in page.project.languages %}
+                {% for item in currProject.languages %}
                     <li>{{ item.text }}</li>
                 {% endfor %}
             </ul>
@@ -90,9 +108,9 @@
     </div>
     
     <div id="Other Contributors">        
-        {% if page.project.contributors | default:blank != blank %}
+        {% if currProject.contributors | default:blank != blank %}
             <h2 class="pTab"> Contributors: </h2>
-            {% for item in page.project.contributors %}
+            {% for item in currProject.contributors %}
             <p>Discipline: {{item.taskName}}</p>
                 <ul>
                     {% for item in item.contrib %}
@@ -111,10 +129,10 @@
 	</div>
     
     <div id="Links">        
-        {% if page.project.links | default:blank != blank %}
+        {% if currProject.links | default:blank != blank %}
             <h2 class="pTab"> Links: </h2>
             <ul>
-                {% for item in page.project.links %}
+                {% for item in currProject.links %}
                     <li>{{ item.text }}: <a href="{{item.url}}">Link.</a></li>
                 {% endfor %}
             </ul>
@@ -122,10 +140,10 @@
 	</div>
     
     <div id="similar projects">
-        {% if page.project.other | default:blank != blank %}
+        {% if currProject.other | default:blank != blank %}
             <h2 class="pTab"> Other: </h2>
             <ul>
-                {% for item in page.project.other %}
+                {% for item in currProject.other %}
                     <li>{{ item.text }}: <a href="\pages\Projects\{{item.url}}">Link.</a></li>
                 {% endfor %}
             </ul>

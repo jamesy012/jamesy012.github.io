@@ -1,5 +1,15 @@
 ---
 layout: default
+
+projectsLS: # projects on the left
+- project: AIEOpenGL
+- project: LD38
+- project: AIEOpenGLLua
+
+projectsRS: # projects on the right
+- project: AieGameJamGrow
+- project: Pseudo3DIn2d
+
 ---
 <link rel="stylesheet" href="/assets/css/index.css">
 <link rel="stylesheet" href="/assets/css/imageColumns.css">
@@ -24,56 +34,16 @@ layout: default
     <div id="sampleHolder">
         <div id="leftSide" class="HolderColumn">
             
-            <div class="imageOverlap" id="projectAieEngineGraphics">
-                    <a href="/pages/Projects/opengl/AieEngine/graphics">
-                    <img class="imageOverlap" src="/assets/projects/opengl/SelfShadow.gif" alt="shadow example">
-                    <p class="imageOverlap">OpenGL engine V1 - C++</p>
-                </a>
-            </div>     
-            
-            <div class="imageOverlap" id="projectLd38">
-                <a href="/pages/Projects/gamejams/ludumDare38">
-                    <img class="imageOverlap" src="/assets/projects/gamejams/ldjam38_1.gif" alt="Ludum dare 38">
-                    <p class="imageOverlap">Ludum dare 38 - Unity</p>
-                </a>
-             </div>
-            
-             <div class="imageOverlap" id="projectAieEnginePhysics">
-                <a href="/pages/Projects/opengl/AieEngine/physics">
-                    <img class="imageOverlap" src="/assets/projects/opengl/physics1.gif" alt="physics example">
-                    <p class="imageOverlap">OpenGL engine V1 basic physics - C++</p>
-                </a>
-             </div>
-            
+            {% include imageColumnProjects.html content=page.projectsLS %}
 
             
         </div><!-- Left side end -->
     
         
         
-        <div id="rightSide">
-            <div class="imageOverlap" id="projectAieGrow">
-                <a href="/pages/Projects/gamejams/aie_Grow">
-                    <img class="imageOverlap" src="/assets/projects/gamejams/aie_Grow1.gif" alt="Grow Game">
-                    <p class="imageOverlap">Grow Game jam - Unity</p>
-                </a>
-            </div>
-            
-            <div class="imageOverlap" id="phusdo3d">
-                <a href="/pages/Projects/cpp/aie_phusdo3dv2">
-                    <img class="imageOverlap" src="/assets/projects/cpp/aie_phusdo3d/phusdo3d1.gif" alt="phusdo3d in 2d">
-                    <p class="imageOverlap">Phusdo 3d in 2d - C++</p>
-                </a>
-            </div>
-            
-            <div class="imageOverlap" id="projectAieEngineLua">
-                <a href="/pages/Projects/opengl/AieEngine/lua">
-                    <img class="imageOverlap" src="/assets/projects/opengl/lua1.gif" alt="Lua example">
-                    <p class="imageOverlap">OpenGL engine V1 Scripting - Lua</p>
-                </a>
-            </div>
-        
-
+        <div id="rightSide" class="HolderColumn">
+    
+            {% include imageColumnProjects.html content=page.projectsRS %}
             
             
         </div><!-- Right side end -->

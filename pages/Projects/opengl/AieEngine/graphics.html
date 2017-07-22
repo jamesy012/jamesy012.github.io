@@ -1,53 +1,8 @@
 ---
 layout: default
 
-project:
- name: OpenGL Engine - Graphics
- description: >
-  For the 2nd year at AIE we had to do a engine in OpenGL that requried
-  <ul>
-      <li>Model loading</li>
-      <li>Model Animation</li>
-      <li>Gpu Shaders</li>
-      <li>Post Processing</li>
-      <li>Frustum culling</li>
-  </ul>
-  <p>
-  I added a few extra features from what was required here and there.
-  </p>
- links:
-  - text: Project/Source
-    url: https://bitbucket.org/jamesy012/aieopengl
- #- text: Download
- #  url: https://bitbucket.org/jamesy012/aieopengl
- other:
-  - text: Lua addition
-    url: opengl\AieEngine\lua
-  - text: Physics implementation
-    url: opengl\AieEngine\physics
- languages:
-  - text: C++
-  - text: GLSL
- images:
-  - loc: opengl/DeferredRendering.gif
-    alt: Deferred Rendering stages
-    desc: >    
-     Demonstrating deferred rendering with 100 lights moving around lighting the plane and the bunny.<br>
-     There are two cameras in the scene, one for looking at the two planes, another for the bunny and lights.
-     <li>Left panel: Showing albedo,position, normal and the light image's</li>
-     <li>Right panel: Showing the final result of the deffered rendering</li>
-  - loc: opengl/SelfShadow.gif
-    alt: Simple shadow on a bunny
-    desc: Directional light coming from the box casting a shadow on the bunny
-  - loc: opengl/Inspector.gif
-    alt: Box being moved via inspector
-    desc: 
-     Directional light coming from the flying box towards the origin<br>
-     Demonstrates the inspector and transform class I made that allows parenting, translation,rotation and scale
-  - loc: opengl/Postprocessing.png
-    alt: before and after a distortion pp effect
-    desc: 
-     simple distortion shader being applied to the screen affecting the 3 spheres
+projectName: AIEOpenGL
+
 ---
 
 {% include project.html %}

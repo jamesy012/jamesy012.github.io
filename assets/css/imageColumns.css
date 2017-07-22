@@ -2,12 +2,17 @@
 div.imageOverlap {
     position: relative;
     margin-bottom: 5px;
+    min-height: 3em;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 img.imageOverlap {
     width: 100%;
     height: 100%;
-    vertical-align:middle
+    vertical-align:middle;
+    
+   border-radius: 5px; 
 }
 
 p.imageOverlap {
@@ -20,9 +25,10 @@ p.imageOverlap {
     color: #fff;
     margin: 0;
     width: 100%;
+    border-radius: 10px 10px 0px 0px;
     
-    opacity:0.75;
-    transition:0.25s;
+    opacity:0.6;
+    transition: 0.5s;
 }
 
 div.imageOverlap:hover p{
@@ -30,20 +36,41 @@ div.imageOverlap:hover p{
 }
 
 
+p.imageOverlapAlt {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 5px 10px 5px 10px;
+    top:0;
+    left: 0;
+    color: #fff;
+    margin: 0;
+    border-radius: 0px 0px 10px 10px;
+    
+    opacity:0;
+    
+    transition: 0.5s;
+}
+
+div.imageOverlapAlt:hover p{
+    opacity:1;
+}
+
 div #leftSide{
     float: left;
-    position: relative;
-    width: 49%;
+
 }
 
 div #rightSide{
     float: right;
-    position: relative;
-    width: 49%;
 }
 
 
 div #sampleHolder{
     overflow: auto;
+}
+
+div .HolderColumn {
+    position: relative;
+    width: 49.7%;
 }
 

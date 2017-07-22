@@ -1,46 +1,5 @@
 ---
 layout: default
-#Move to a yml in the _Data folder????
-projects:
- current:
-  - name: New OpenGL engine
-    url: opengl/openglEngine
-    status: Implementing basics
-  - name: Git Ignore editor
-    status: Mostly done
-  - name: Unity Car shooter Game
-    status: Just started
-  - name: Direct Input DLL for use with unity
-    status: Working dll, with unity implementation<br>
-     might add XInput for xbox controllers
- list:
-  - name: C++
-    data:
-     - name: OpenGL engine with AIE
-       url: opengl/AieEngine/graphics
-     - name: Phusdo 3d
-       url: cpp/aie_phusdo3dv2
-     - name: New OpenGL engine
-       url: opengl/openglEngine
-     - name: Direct Input DLL for use with unity
-  - name: Unity
-    data:
-     - name: Turn based strategy game
-     - name: Unity Car shooter Game
-  - name: Game Jam's
-    data:
-     - name: Grow with AIE
-       url: gamejams/aie_Grow
-     - name: Ludum dare 38
-       url: gamejams/ludumDare38
-     - name: Ludum dare 37
-       url: gamejams/ludumDare37
-  - name: Android (Java)
-    data:
-     - name: Ants Nest
-  - name: C#
-    data:
-     - name: Git Ignore editor
 ---
 
 
@@ -55,39 +14,58 @@ projects:
 <div>
 
     <h2>Currently working on:</h2>
-    
-    <ul>        
-        {% for item in page.projects.current %}
+    <ul>     
+        {% for project in site.data.projects %}
+            {% if project.project.pData.pInDev %}
             <li>
-                 {{item.name}}:
-                 {% if item.url %}
-                    <a href="/pages/Projects/{{item.url}}">Link</a>
-                {% endif %}
-                <ul> 
-                    {% if item.status %}
-                        Status: {{item.status}}.
-                    {% endif %}
-                </ul>
+                {{project.project.altName | default: project.project.name}}:
+                    {% if project.project.pData.pPath %}
+                        <a href="/pages/Projects/{{project.project.pData.pPath}}.html">Link</a>
+                    {% endif %}                    
+                    {% if project.project.pData.pStatus %}
+                        <ul> 
+                            Status: {{project.project.pData.pStatus}}
+                        </ul>
+                    {% endif %}                 
             </li>
+            {% endif %}
         {% endfor %}
     </ul>
+    
     <br>
-    <h2>Other projects:</h2>
+    <h2>List of all projects:</h2>
     <br>
-    <ul>
-        {% assign listItems = page.projects.list | sort: 'name' %}
-        {% for item in listItems %}
-            <li> <h2 class="removePadding">{{item.name}}</h2></li>
+    
+    <ul>     
+        {% assign langList = site.data.languages | sort: 'lang' %}
+        {% for language in langList %}
+        
+            <li> <h2 class="removePadding">{{language.lang}}:</h2></li>
             <ul>    
-                {% for data in item.data %}
-                <li>
-                    {{ data.name }}:
-                    {% if data.url %}
-                    <a href="/pages/Projects/{{data.url}}">Link</a>
+                {% for project in site.data.projects %}
+                    {% if project.project.languages[0].text == language.lang %}
+                        <li>
+                            {% assign projName = project.project.altName | default: project.project.name %}
+                            
+                            {% if project.project.pData.pGameJam %}
+                                {{projName}} (Game Jam):
+                            {% else %}
+                                {{projName}}:
+                            {% endif %}
+                            
+                            {% if project.project.pData.pPath %}
+                                <a href="/pages/Projects/{{project.project.pData.pPath}}.html">Link</a>
+                            {% endif %}
+                            {% if project.project.smallDesc %}
+                                <ul> 
+                                    Description: {{project.project.smallDesc}}
+                                </ul>
+                            {% endif %}
+                        </li>
                     {% endif %}
-                </li>
                 {% endfor %}
             </ul>
         {% endfor %}
     </ul>
+    
 </div>

@@ -1,0 +1,392 @@
+##### basic layout of a project in this file, 
+##### #R means it's required
+#- name:                #R      Name of the project
+#  altName:             #       A alternate name for this project (used in /Projects if specified)
+#  pData:               #R      Holder of data used to identify this project
+#   pName:                  #R      Name to find the project
+#   pPath:                  #       Path to find the project html file
+#   pInDev                  #       Am I currently working on this project
+#   pStatus                 #       What is the status of this file
+#   pGameJam                #       Was this game a gameJam
+#  smallDesc:           #       A description that appears on the top of the image in the columns
+#  description:         #R      Description of the project
+#  myContributions:     #       What I did
+#  images:              #       List of images
+#   - loc:                  #R      Location of the file NOT including /assets/projects/
+#     alt:                  #       Alt text for the image
+#     desc:                 #       Description of the file
+#  - videos:            #       List of videos
+#    url:                   #R      Trailing part of the video URL 
+#    type:                  #R      youtube/vimeo
+#    desc:                  #       Description of the video
+#  - languages:         #       Which Lanuages did I use in this project
+#    - text:                #R      Language Name
+#  - links:             #       Other links for this project (eg. source/download)
+#    - text:                #R      name/text for this file
+#      url:                 #R      URL for this file
+#  - other:             #       Similar projects to this one
+#    - text:                #R      Name of the other project
+#      url:                 #R      URL to project NOT including \pages\Projects\
+
+#todo, move to seperate files in _data???
+#like projects/cpp or project/gamejams
+#have a file here called catagorys that will list out which ones go in which catagory
+#since this doesnt seem like the best way to do it :/
+
+#Projects:
+
+- project:
+   name: Aie OpenGL Engine - Graphics
+   pData:
+    pName: AIEOpenGL
+    pPath: opengl/AieEngine/graphics
+   smallDesc: A OpenGL graphics engine I made for the graphics unit at AIE.<br>
+    It is a Lib, with Lua bindings and Physics that can be used with this. 
+   description: 
+    For the 2nd year at AIE we had to do a engine in OpenGL that requried
+    <ul>
+        <li>Model loading</li>
+        <li>Model Animation</li>
+        <li>Gpu Shaders</li>
+        <li>Post Processing</li>
+        <li>Frustum culling</li>
+    </ul>
+    <p>
+    I added a few extra features from what was required here and there.
+    </p>
+   links:
+    - text: Project/Source
+      url: https://bitbucket.org/jamesy012/aieopengl
+   #- text: Download
+   #  url: https://bitbucket.org/jamesy012/aieopengl
+   other:
+    - text: Lua addition
+      url: opengl\AieEngine\lua
+    - text: Physics implementation
+      url: opengl\AieEngine\physics
+   languages:
+    - text: C++
+    - text: GLSL
+   images:
+    - loc: opengl/SelfShadow.gif
+      alt: Simple shadow on a bunny
+      desc: Directional light coming from the box casting a shadow on the bunny
+    - loc: opengl/DeferredRendering.gif
+      alt: Deferred Rendering stages
+      desc: >
+       Demonstrating deferred rendering with 100 lights moving around lighting the plane and the bunny.<br>
+       There are two cameras in the scene, one for looking at the two planes, another for the bunny and lights.
+       <li>Left panel: Showing albedo,position, normal and the light image's</li>
+       <li>Right panel: Showing the final result of the deferred rendering</li>
+    - loc: opengl/Inspector.gif
+      alt: Box being moved via the inspector
+      desc: 
+       Directional light coming from the flying box towards the origin<br>
+       Demonstrates the inspector and transform class I made that allows parenting, translation, rotation and scale
+    - loc: opengl/Postprocessing.png
+      alt: before and after a distortion pp effect
+      desc: 
+       simple distortion shader being applied to the screen affecting the 3 spheres
+
+- project:
+   name: Aie OpenGL Engine - Lua
+   pData:
+    pName: AIEOpenGLLua
+    pPath: opengl/AieEngine/lua
+   description: 
+    I Implemented Lua bindings into my C++ engine,<br>
+    <p>In Lua you can:</p>
+    <ul>
+      <li>Transform creation.</li>
+      <ul>
+          <li>Transform movement.</li>
+          <li>Transform rotation.</li>
+          <li>Transform parenting.</li>
+      </ul>
+      <li>Mesh/Image creation.</li>
+      <li>Camera modifications.</li>
+    </ul>
+    <br>
+    <p>
+    all objects are given a number that relates to the object within the C++ code.<br>
+    almost like a pointer to the object in c++.<br>
+    there is also common Lua files that maintain input and the different types that are usable
+    </p>
+   links:
+    - text: Project/Source
+      url: https://bitbucket.org/jamesy012/aieopengl
+    - text: Lua Code
+      url: https://bitbucket.org/jamesy012/aieopengl
+   languages:
+    - text: C++
+    - text: Lua
+   images:
+    - loc: opengl/lua1.gif 
+      alt: an example of Lua being used within the engine
+      desc: 
+       Example of the Lua bindings within my graphics engine<br>
+       Everything in the gif is controlled by lua<br>
+       I am able to spawn the birds and bunny, and also take control of them
+   other:
+    - text: Graphics implementation
+      url: opengl\AieEngine\graphics
+    - text: Physics implementation
+      url: opengl\AieEngine\physics
+    
+- project:
+   name: Aie OpenGL Engine - Physics
+   pData:
+    pName: AIEOpenGLPhysics
+    pPath: opengl/AieEngine/physics
+   description:
+    Basic physics engine Lib built upon my work in my graphics lib.
+    only AABB and sphere collisions, although the angle of the box&#39;s are considered when calculating forces from the collision
+   links:
+    - text: Project/Source
+      url: https://bitbucket.org/jamesy012/aieopengl
+   languages:
+    - text: C++
+   images:
+    - loc: opengl/physics1.gif 
+      alt: 
+      desc:
+    - loc: opengl/physics2.gif 
+      alt: 
+      desc:
+    - loc: opengl/physics3.gif 
+      alt: 
+      desc: 
+       The cubes all use AABB, so when rotated the collider no longer matches up,<br>
+       but when working out the angle from the collision I used the angle of the cube, so all the balls will slide to the direction the cube is rotated.      
+   other:
+    - text: Graphics implementation
+      url: opengl\AieEngine\graphics
+    - text: Lua addition
+      url: opengl\AieEngine\lua
+      
+- project:
+   name: OpenGL Engine - Millard
+   altName: New OpenGL engine
+   pData:
+    pName: MillardEngine
+    pPath: opengl/openglEngine
+    pInDev: yes
+    pStatus: Implementing basics.
+   description: 
+    A rewrite of my last engine currently missing a lot of features compared to the old one.<br>
+    I named it Millard because I like ducks :)<br>
+    Currently working on this, Since I have an example from my last engine, this one should be structured a lot better<br>
+    <br>
+    Very early on, so no screenshots atm.<br>
+    Currently only has basic texture and model loading, with a resource manager that deals with loading the same file twice
+   links:
+    - text: Project/Source
+      url: https://github.com/jamesy012/Mallard-OpenGL-Engine
+   languages:
+    - text: C++
+    - text: GLSL
+    - text: OpenGL
+   other:
+    - text: Old OpenGL engine
+      url: opengl\AieEngine\graphics
+      
+- project:
+   name: Pseudo3D renderer
+   pData:
+    pName: Pseudo3DIn2d
+    pPath: cpp/aie_pseudo3dv2
+   smallDesc: A ray-caster that turns a 2d map into a semi 3d looking area.
+   description: 
+    During my first year at AIE I was making different examples just to improve my skill,<br>
+    after a fail attempt at 3d <a href="https://www.youtube.com/watch?v=ma4MsfVIqdc">(Youtube Link)</a><br>
+    I was determined to make a better version of it!<br>
+    While reading about ray-casting and how wolfenstein was rendered I set out to make this.
+#  links:
+#   - text: Source + runnable version
+#     url: _ add Link to download
+   languages:
+    - text: C++
+   images:
+    - loc: cpp/aie_pseudo3d/pseudo3d1.gif
+      alt: Sample of the game
+      desc: Able to walk around the area at a stable fps.
+    - loc: cpp/aie_pseudo3d/pseudo3d3.gif
+      alt: Level load
+      desc: There is a level manager, where you can pick from a list of levels<br>
+       levels can also be different sizes.
+    - loc: cpp/aie_pseudo3d/pseudo3d2.gif
+      alt: Level editor
+      desc: You can also edit and create new levels that get added to the list.
+   videos:
+    - url: MB0nM_WPkxU
+      type: youtube
+      desc: video demonstrating the program
+
+- project:
+   name: Grow - Game jam (Aie)
+   pData:
+    pName: AieGameJamGrow
+    pPath: gamejams/aie_Grow
+    pGameJam: yes
+   description: 
+    Before starting our major production game unit, we had a small game jam for groups which had their pitch video's ready<br>
+    we made this in two days<br>
+    The target device for this game was mobile
+   links:
+    - text: Project/Source
+      url: https://github.com/jamesy012/AIE-Grow-GameJam
+    #- text: Download
+    #  url: https://bitbucket.org/jamesy012/aieopengl
+   languages:
+    - text: Unity
+    - text: C#
+   images:
+    - loc: gamejams/aie_Grow1.gif
+      alt: Sample of the game
+      desc: Dodge the birds to get higher
+    - loc: gamejams/aie_Grow2.png
+      alt: player about to lose
+      desc: Going off off-screen will cause the player to loose the game
+    - loc: gamejams/aie_Grow3.png
+      alt: Start screen
+      desc: Start screen
+   videos:
+    - url: 223726970
+      type: vimeo
+      desc: Trailer for the game
+   contributors:
+    - taskName: Programming
+      contrib:
+      - name: Vincent Chin
+        url: https://github.com/VincentChin94
+    - taskName: Art
+      contrib:
+      - name: Andrew Arthur
+        url: https://www.artstation.com/artist/andrewarthur
+      - name: Michael Price
+   myContributions:
+    <ul>
+        <li>Hooked up menu/pause logic and game restarting</li>
+        <li>Worked on the code for the spawners</li>
+    </ul>
+    
+- project:
+   name: Ludum dare 37 - One Room
+   pData:
+    pName: LD37
+    pPath: gamejams/ludumDare37
+    pGameJam: yes
+   description: 
+    The game I made in 48 hours by myself for the ludum dare compo.<br>
+    I did the code,models and images in the game.<br>
+    The music was generated online.
+   links:
+    - text: Project/Source
+      url: https://drive.google.com/open?id=0B2USXC1pDFiqMUtDcDFhLUdqVFE
+    - text: Download (windows)
+      url: https://drive.google.com/open?id=0B2USXC1pDFiqLVJJWGNjZW0wYlE
+    - text: Web build
+      url: https://jamesy012.itch.io/the-box-sorting-extravaganza-ld37
+    - text: Ludum Dare page
+      url: http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=6890
+   languages:
+    - text: Unity
+    - text: C#
+#   images:
+#    - loc: opengl/Postprocessing.png
+#      alt: before and after a distortion pp effect
+#      desc: 
+#       simple distortion shader being applied to the screen affecting the 3 spheres
+   videos:
+    - url: eJvtaMBujp0
+      type: youtube
+      desc: gameplay
+   other:
+    - text: Ludum Dare 38
+      url: gamejams/ludumDare38
+      
+- project:
+   name: Ludum Dare 38 - A Small World
+   pData:
+    pName: LD38
+    pPath: gamejams/ludumDare38
+    pGameJam: yes
+   description: 
+    The game I made in 72 hours with a friend for the Ludum dare compo.<br>
+    we are both sorta split between the work.<br><br>
+    The aim is to stop disasters from hitting the inhabitants.<br>
+    I did most of the user interactions such as the meteor flicking and cloud
+   links:
+    - text: Project/Source
+      url: https://github.com/jamesy012/ludumdare-38
+    - text: Download (windows)
+      url: https://drive.google.com/open?id=0B2USXC1pDFiqTi05U1A4RjlTR1k
+    - text: Web build
+      url: https://jamesy012.itch.io/meteorite-madness
+    - text: Ludum Dare page
+      url: https://ldjam.com/events/ludum-dare/38/global-disaster
+   languages:
+    - text: Unity
+    - text: C#
+   images:
+    - loc: gamejams/ldjam38_1.gif
+      alt: Meteor crashing into the planet
+      desc: Meteor crashing into the planet
+    - loc: gamejams/ldjam38_2.gif
+      alt: Shot of the planet
+      desc: Shot of the planet
+    - loc: gamejams/ldjam38_3.gif
+      alt: Lightning striking one of the inhabitants
+      desc: 
+       Lightning striking one of the inhabitants, I worked on the animation and added the rain particles
+#  videos:
+#   - url: eJvtaMBujp0
+#     type: youtube
+#     desc: gameplay
+   contributors:
+    - taskName: Made with
+      contrib:
+      - name: Vincent Chin
+        url: https://github.com/VincentChin94
+   other:
+    - text: Ludum dare 37
+      url: gamejams/ludumDare37
+      
+- project:
+   name: Git Ignore editor
+   pData:
+    pInDev: yes
+    pStatus: Mostly done.
+   languages:
+    - text: C#
+    
+- project:
+   name: Unity Car shooter Game
+   pData:
+    pInDev: yes
+    pStatus: Just started.
+   languages:
+    - text: Unity
+    - text: C#
+    
+- project:
+   name: Direct Input DLL
+   altName: Direct Input DLL for use with unity
+   smallDesc: Turns Xbox and ps4 controller input into a common format which can be included into Unity<br>
+    can deal with adding and removing controller better than Unity implementation.
+   pData:
+    pInDev: yes
+    pStatus: Working DLL, with unity implementation<br>
+     might add XInput for Xbox controllers.<br>
+     considering changing to use HID instead.
+   languages:
+    - text: C++
+    - text: C#
+     
+- project:
+   name: Ants Nest
+   smallDesc: A game I made with a lecturer at Deakin University.<br>
+    It's a simulation of a nest of ants,
+    I did all the programming.
+   languages:
+    - text: Java (Android)

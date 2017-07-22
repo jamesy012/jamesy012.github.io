@@ -1,0 +1,22 @@
+
+{% for projectID in include.content %}
+
+    {% for project in site.data.projects %}
+        {% if project.project.pData.pName == projectID.project %}
+            {% assign prog = project.project %}
+ <div class="imageOverlap" id="project{{projectID.project}}">
+     <a href="/pages/Projects/{{prog.pData.pPath}}.html">
+     
+     <img class="imageOverlap" src="/assets/projects/{{prog.images[0].loc}}" alt="{{prog.images[0].alt}}">
+        <p class="imageOverlap">{{ prog.name }}</p>
+     
+         {% if prog.smallDesc %}
+            <p class="imageOverlapAlt">{{prog.smallDesc}}</p>
+         {% endif %}
+     </a>
+     
+</div>
+            {% break %}
+        {% endif %}             
+    {% endfor %}
+{% endfor %}
