@@ -97,7 +97,7 @@
     Lua Lib as an extension of the game engine I made, You can do almost everything in lua that the engine is capable of.
    description: 
     I Implemented Lua bindings into my C++ engine,<br>
-    <p>In Lua you can:</p>
+    <p>It can :</p>
     <ul>
       <li>Transform creation.</li>
       <ul>
@@ -106,6 +106,7 @@
           <li>Transform parenting.</li>
       </ul>
       <li>Mesh/Image creation.</li>
+      <li>Material load and color</li>
       <li>Camera modifications.</li>
     </ul>
     <br>
@@ -117,8 +118,10 @@
    links:
     - text: Project/Source
       url: https://bitbucket.org/jamesy012/aieopengl
-    - text: Lua Code
-      url: https://bitbucket.org/jamesy012/aieopengl
+    - text: Lua Code (/LuaEngine/ and ObjectCreationText.lua)
+      url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4/_WorkingDir/Files/Scripts/?at=master
+    - text: Lua engine implemention, C++ code 
+      url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4cd8182576028425c625dcc509b31/Projects/LibScripting/LuaBaseObject.cpp?at=master&fileviewer=file-view-default
    languages:
     - text: C++
     - text: Lua
@@ -316,7 +319,7 @@
     pPath: gamejams/ludumDare38
     pGameJam: yes
    smallDesc: >
-    A small game for a small world, save the inhabitants, or smash metrorrs into them :+1:
+    A small game for a small world, save the inhabitants, or smash metrorrs into them! :fire:
    description: 
     The game I made in 72 hours with a friend for the Ludum dare compo.<br>
     we are both sorta split between the work.<br><br>

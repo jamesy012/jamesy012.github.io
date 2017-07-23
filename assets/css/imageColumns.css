@@ -2,7 +2,7 @@
 div.imageOverlap {
     position: relative;
     margin-bottom: 10px;
-    min-height: 3em;
+    min-height: 15em;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -80,6 +80,6 @@ div #sampleHolder{
 
 div .HolderColumn {
     position: relative;
-    width: 49.5%;
+    width: 49.2%;
 }
 

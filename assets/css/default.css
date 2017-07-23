@@ -69,3 +69,95 @@ p, h2, h3 {
 .removePadding {
     padding: initial;
 }
+
+
+/* DARK MODE */
+body {
+    background-image: url(/assets/images/site/bg.png);
+    background-position: 0px;
+    background-size: initial;
+    background-repeat: repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(34, 34, 34);
+    
+    text-shadow: 0 0 30px rgba(0,0,0,0.8);
+    color: #D3D3D3;
+}
+
+h1, h2, h3, h4, h5, h6, header h1 {
+    color: #E2E2E2;
+}
+
+
+#container {
+    background-image: url(/assets/images/site/bg-top.png);
+    background-position: 50% 0px;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent;
+}
+
+hr {
+    background-image: url(/assets/images/site/hr.png);
+    background-position: 50%, 0px;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent;
+    
+
+    overflow-x: hidden;
+}
+
+a.button {
+    background-image: initial;   
+    background-position: 50% 0px;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    
+    background-color: #202020;
+    border: solid 2px #555555;
+    border-top-color: #4D4D4D;
+    /*box-shadow: 1px 1px 2px #7E7E7E;*/
+    box-shadow: unset;
+}
+
+a.button:hover {
+    background-image: initial;   
+    background-position: 50% 0px;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    
+    background-color: #2A2A2A;
+    border: solid 2px #555555;
+    border-top-color: #4D4D4D;
+    box-shadow: 1px 1px 10px #838383;
+}
+
+
+a.button span{
+    color: #D3D3D3;
+}
+
+footer {
+    background: initial;
+    
+}
+footer hr{
+    position:relative;
+    margin-bottom: -20px;
+    top: -25px;
+}
