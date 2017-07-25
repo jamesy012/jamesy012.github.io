@@ -106,7 +106,7 @@
           <li>Transform parenting.</li>
       </ul>
       <li>Mesh/Image creation.</li>
-      <li>Material load and color</li>
+      <li>Material load and colour</li>
       <li>Camera modifications.</li>
     </ul>
     <br>
@@ -374,6 +374,8 @@
    pData:
     pInDev: yes
     pStatus: Just started.
+   smallDesc: A test for a dynamic camera that can go from the main menu and transition to gameplay.<br>
+    It uses a car/AI system I made a few months back 
    languages:
     - text: Unity
     - text: C#
