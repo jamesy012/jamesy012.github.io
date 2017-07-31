@@ -55,10 +55,10 @@
     I added a few extra features from what was required here and there.
     </p>
    links:
-    - text: Project/Source
-      url: https://bitbucket.org/jamesy012/aieopengl
-   #- text: Download
-   #  url: https://bitbucket.org/jamesy012/aieopengl
+    - text: Lib Source
+      url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4cd8182576028425c625dcc509b31/Projects/LibEngine/?at=master
+    - text: Examples Source
+      url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4cd8182576028425c625dcc509b31/Projects/ComputerGraphics/?at=master
    other:
     - text: Lua addition
       url: opengl\AieEngine\lua
@@ -116,12 +116,14 @@
     there is also common Lua files that maintain input and the different types that are usable
     </p>
    links:
-    - text: Project/Source
-      url: https://bitbucket.org/jamesy012/aieopengl
-    - text: Lua Code (/LuaEngine/ and ObjectCreationText.lua)
+    - text: Lua Bindings Lib
+      url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4cd8182576028425c625dcc509b31/Projects/LibScripting/?at=master
+    - text: Lua Code (inc /LuaEngine/)
       url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4/_WorkingDir/Files/Scripts/?at=master
     - text: Lua engine implemention, C++ code 
       url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4cd8182576028425c625dcc509b31/Projects/LibScripting/LuaBaseObject.cpp?at=master&fileviewer=file-view-default
+    - text: Example Code
+      url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4cd8182576028425c625dcc509b31/Projects/ScriptingLibTest/?at=master
    languages:
     - text: C++
     - text: Lua
@@ -147,8 +149,10 @@
     Basic physics engine Lib built upon my work in my graphics lib.
     only AABB and sphere collisions, although the angle of the box&#39;s are considered when calculating forces from the collision
    links:
-    - text: Project/Source
-      url: https://bitbucket.org/jamesy012/aieopengl
+    - text: Lib Source
+      url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4cd8182576028425c625dcc509b31/Projects/LibPhysics/?at=master
+    - text: Example Source
+      url: https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4cd8182576028425c625dcc509b31/Projects/PhysicsTest/?at=master
    languages:
     - text: C++
    images:
@@ -182,10 +186,18 @@
     I named it Millard because I like ducks :)<br>
     Currently working on this, Since I have an example from my last engine, this one should be structured a lot better<br>
     <br>
-    Very early on, so no screenshots atm.<br>
-    Currently only has basic texture and model loading, with a resource manager that deals with loading the same file twice
+    Very early on, so no screenshots for the moment.<br>
+    Currently only has
+    <ul>
+        <li>Texture loading(stb_image)</li>
+        <li>Model loading(Assimp)</li>
+        <li>Text rendering(stb_truetype)</li>
+        <li>A resource maanager that deals with files loaded from disk</li>
+        <li>A local version of shader uniform values with a easy way to modify and set the data</li>
+    </ul>
+    There is a list of features I would like to add that I am keeping track with a trello board 
    links:
-    - text: Project/Source
+    - text: Source code
       url: https://github.com/jamesy012/Mallard-OpenGL-Engine
    languages:
     - text: C++
@@ -193,8 +205,7 @@
     - text: OpenGL
    other:
     - text: Old OpenGL engine
-      url: opengl\AieEngine\graphics
-      
+      url: opengl\AieEngine\graphics      
 - project:
    name: Pseudo3D renderer
    pData:
@@ -233,8 +244,7 @@
     pName: AieGameJamGrow
     pPath: gamejams/aie_Grow
     pGameJam: yes
-   smallDesc: >
-    A game made in 3 days with another programmer :computer: and 2 artist :art: during AIE hours. 
+   smallDesc: A game made in 3 days with another programmer and 2 artist during AIE hours. 
    description: 
     Before starting our major production game unit, we had a small game jam for groups which had their pitch video's ready<br>
     we made this in two days<br>
@@ -275,6 +285,7 @@
     <ul>
         <li>Hooked up menu/pause logic and game restarting</li>
         <li>Worked on the code for the spawners</li>
+        <li>Camera System</li>
     </ul>
     
 - project:
@@ -286,13 +297,47 @@
    description: 
     The game I made in 48 hours by myself for the ludum dare compo.<br>
     I did the code,models and images in the game.<br>
-    The music was generated online.
+    The music was generated online.<br>
+    <div style="padding-left:5%;padding-right:10%; width:30%; float:right;">
+    <table>
+        <tr>
+            <th>Overall&#58;</th><th>337th</th>
+        </tr>
+        <tr>
+            <th>Fun&#58;</th><th>286th</th>
+        </tr>
+        <tr>
+            <th>Innovation&#58;</th><th>331st</th>
+        </tr>
+        <tr>
+            <th>Theme&#58;</th><th>177th</th>
+        </tr>
+        <tr>
+            <th>Graphics&#58;</th><th>382nd</th>
+        </tr>
+        <tr>
+            <th>Audio&#58;</th><th>226th</th>
+        </tr>
+        <tr>
+            <th>Humor&#58;</th><th>284th</th>
+        </tr>
+        <tr>
+            <th>Mood&#58;</th><th>380th</th>
+        </tr>
+    </table>
+    </div>
+    <p>
+    Out of 2390 games my game managed to place.<br><br>
+    There were a few gameplay issues such as accidentally getting your boxes on the shelves.<br><br>
+    In the end the game was hectic and when a pile of boxes came in it made the player feel overwhelmed which was the intended feeling I was aiming for.<br><br>
+    Like when a truck has just left and now you have to go through and organize the pile boxes giving the player something to always be doing.
+    </p>
    links:
     - text: Project/Source
       url: https://drive.google.com/open?id=0B2USXC1pDFiqMUtDcDFhLUdqVFE
     - text: Download (windows)
       url: https://drive.google.com/open?id=0B2USXC1pDFiqLVJJWGNjZW0wYlE
-    - text: Web build
+    - text: Web build (Can play in browser)
       url: https://jamesy012.itch.io/the-box-sorting-extravaganza-ld37
     - text: Ludum Dare page
       url: http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=6890
@@ -320,11 +365,44 @@
     pGameJam: yes
    smallDesc: >
     A small game for a small world, save the inhabitants, or smash metrorrs into them! :fire:
-   description: 
+   description:
     The game I made in 72 hours with a friend for the Ludum dare compo.<br>
     we are both sorta split between the work.<br><br>
     The aim is to stop disasters from hitting the inhabitants.<br>
-    I did most of the user interactions such as the meteor flicking and cloud
+    I did most of the user interactions such as the meteor flicking and cloud.
+    <br>
+    <div style="padding-left:5%;padding-right:10%; width:30%; float:right;">
+    <table>
+        <tr>
+            <th>Overall&#58;</th><th>275th</th>
+        </tr>
+        <tr>
+            <th>Fun&#58;</th><th>98th</th>
+        </tr>
+        <tr>
+            <th>Innovation&#58;</th><th>372nd</th>
+        </tr>
+        <tr>
+            <th>Theme&#58;</th><th>89th</th>
+        </tr>
+        <tr>
+            <th>Graphics&#58;</th><th>525th</th>
+        </tr>
+        <tr>
+            <th>Audio&#58;</th><th>227th</th>
+        </tr>
+        <tr>
+            <th>Humor&#58;</th><th>318th</th>
+        </tr>
+        <tr>
+            <th>Mood&#58;</th><th>443th</th>
+        </tr>
+    </table>
+    </div>
+    <br>
+    Out of 2980 games our game managed to place.
+    We did a really good job on making the game fun while sticking very close to the theme.<br>
+    while overall doing a very good job being in the top 15% of games in every category.
    links:
     - text: Project/Source
       url: https://github.com/jamesy012/ludumdare-38
@@ -396,9 +474,9 @@
      
 - project:
    name: Ants Nest
-   smallDesc: A game I made as a collaboration with a lecturer at Deakin University.<br>
-    It's a simulation of a nest of ants,
-    It is a continuation from a Java app I made which simulated a group of people.<br>
+   smallDesc: A Android app made in collaboration with a lecturer at Deakin University.<br>
+    It's a simulation of a nest of ants.
+    A continuation from a Java app which simulated a group of people.<br>
     We plan to put it on the play store.
    languages:
     - text: Java (Android)

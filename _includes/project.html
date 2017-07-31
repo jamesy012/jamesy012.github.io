@@ -32,12 +32,56 @@
   {% break %}
 {% endif %}
 
+<div class="sideHolder">
+    <div class="sideData">
+        <h2> {{ currProject.name | default: 'project name undefined' }}: </h2>
+        {% if currProject.smallDesc | default:blank != blank %}
+        <div id="ShortDesc">
+            <p>
+                {{currProject.smallDesc}}
+            </p>
+        </div>
+        {% endif %}
+        <div id="Languages">
+            {% if currProject.languages | default:blank != blank %}
+                <h2> Languages: </h2>
+                <ul>
+                    {% for item in currProject.languages %}
+                    <li>{{ item.text }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        {% if currProject.links | default:blank != blank %}
+        <br>
+            <div id="Links">
+                 <h2> Links: </h2>
+                 <ul>
+                     {% for item in currProject.links %}
+                         <li>{{ item.text }}: <a href="{{item.url}}">Link.</a></li>
+                     {% endfor %}
+                 </ul>
+            
+            </div>
+        {% endif %}
+        {% if currProject.other | default:blank != blank %}
+        <br>        
+            <div id="similar projects">
+                 <h2> Other: </h2>
+                 <ul>
+                     {% for item in currProject.other %}
+                         <li>{{ item.text }}: <a href="\pages\Projects\{{item.url}}">Link.</a></li>
+                     {% endfor %}
+                 </ul>             
+            </div>
+        {% endif %}
+    </div>
+</div>
 
-<div id="ProjectPage">
+<div id="ProjectPage">    
     <div id="ProjectName">
         <h2> Project: {{ currProject.name | default: 'project name undefined' }}. </h2>
     </div>
-
     
 	<div id="Description">
         <h2 class="pTab"> Description: </h2>
@@ -95,18 +139,7 @@
             {% endfor %}
         {% endif %}
 	</div>
-    
-    <div id="Languages">
-        {% if currProject.languages | default:blank != blank %}
-            <h2 class="pTab"> Languages: </h2>
-            <ul>
-                {% for item in currProject.languages %}
-                    <li>{{ item.text }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </div>
-    
+
     <div id="Other Contributors">        
         {% if currProject.contributors | default:blank != blank %}
             <h2 class="pTab"> Contributors: </h2>
@@ -128,25 +161,4 @@
         {% endif %}
 	</div>
     
-    <div id="Links">        
-        {% if currProject.links | default:blank != blank %}
-            <h2 class="pTab"> Links: </h2>
-            <ul>
-                {% for item in currProject.links %}
-                    <li>{{ item.text }}: <a href="{{item.url}}">Link.</a></li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-	</div>
-    
-    <div id="similar projects">
-        {% if currProject.other | default:blank != blank %}
-            <h2 class="pTab"> Other: </h2>
-            <ul>
-                {% for item in currProject.other %}
-                    <li>{{ item.text }}: <a href="\pages\Projects\{{item.url}}">Link.</a></li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </div>
 </div>

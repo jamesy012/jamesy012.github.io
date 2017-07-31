@@ -10,3 +10,31 @@
 	margin-bottom: unset;
 	padding: unset;
 }
+
+.sideData{
+    /* fixed is the same as absolute but will keep it at the same place*/
+    position: absolute;
+    width: 400px;
+    padding: 5px;
+    border-radius: 20px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: white;
+    padding-bottom: 15px; 
+}
+
+.sideHolder {
+    float: right;
+    position:relative;
+    left: 3ex;
+    top: -125px;
+}
+
+table {
+    border: none;
+    text-align: left;
+}
+
+div #Description {
+    overflow:auto;
+}
