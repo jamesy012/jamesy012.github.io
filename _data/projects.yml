@@ -96,8 +96,8 @@
    smallDesc:
     Lua Lib as an extension of the game engine I made, You can do almost everything in lua that the engine is capable of.
    description: 
-    I Implemented Lua bindings into my C++ engine,<br>
-    <p>It can :</p>
+    A Implemtation for Lua using bindings built into my C++ OpenGL engine (Link to the side),<br>
+    <p>Within Lua you can:</p>
     <ul>
       <li>Transform creation.</li>
       <ul>
@@ -111,9 +111,9 @@
     </ul>
     <br>
     <p>
-    all objects are given a number that relates to the object within the C++ code.<br>
-    almost like a pointer to the object in c++.<br>
-    there is also common Lua files that maintain input and the different types that are usable
+    All objects are given a number that relates to the object within the C++ code.<br>
+    Almost like a pointer to the object in C.<br>
+    there is also common Lua files that maintain input and the different data types that are creatable and useable.
     </p>
    links:
     - text: Lua Bindings Lib
@@ -130,10 +130,16 @@
    images:
     - loc: opengl/lua1.gif 
       alt: an example of Lua being used within the engine
-      desc: 
-       Example of the Lua bindings within my graphics engine<br>
-       Everything in the gif is controlled by lua<br>
-       I am able to spawn the birds and bunny, and also take control of them
+      desc: >
+       So, whats going on here...<br>
+       Well it's a demonstration of my Lua implementation.<br>
+       The starting plane is created, colored and scaled within lua.<br>
+       It starts off with spawning a bunch of planes assigning them to a array which gives them the bird like movement and applying the texture swap animation.<br>
+       I can select planes and control them with WASD and mouse movement.<br>
+       Then I spawn a un textured bunny and move that around the scene.<br><br>
+       If you want to see the lua code that handles this scene 
+       <a href="https://bitbucket.org/jamesy012/aieopengl/src/bc2dfbbee3f4cd8182576028425c625dcc509b31/_WorkingDir/Files/Scripts/ObjectCreationTest.lua?at=master&fileviewer=file-view-default">Link.</a><br>
+       It does a little more than whats shown here and gives an idea of how the lua aspect of the implementation operates  
    other:
     - text: Graphics implementation
       url: opengl\AieEngine\graphics
@@ -465,9 +471,8 @@
     can deal with adding and removing controller better than Unity implementation.
    pData:
     pInDev: yes
-    pStatus: Working DLL, with unity implementation<br>
-     might add XInput for Xbox controllers.<br>
-     considering changing to use HID instead.
+    pStatus: Working DLL, with unity implementation.<br>
+     Going to rewrite it to use HID instead.
    languages:
     - text: C++
     - text: C#
@@ -480,3 +485,14 @@
     We plan to put it on the play store.
    languages:
     - text: Java (Android)
+    
+- project:
+   name: Bullet Ballet (AIE)
+   smallDesc: Game for the Major production unit at AIE, currently working on the prototype as the only programmer
+   pData:
+    pInDev: yes
+    pStatus: Working prototype.
+   languages:
+    - text: Unity
+    - text: C#
+     
