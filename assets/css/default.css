@@ -70,6 +70,10 @@ p, h2, h3 {
     padding: initial;
 }
 
+table {
+    border: none;
+}
+
 
 /* DARK MODE */
 body {
@@ -161,3 +165,5 @@ footer hr{
     margin-bottom: -20px;
     top: -25px;
 }
+
+/* DARK MODE END */

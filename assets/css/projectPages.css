@@ -31,10 +31,16 @@
 }
 
 table {
-    border: none;
     text-align: left;
 }
 
 div #Description {
     overflow:auto;
+}
+
+div #LdScore {
+    padding-left:5%;
+    padding-right:10%; 
+    width:30%; 
+    float:right;
 }
