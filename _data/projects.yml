@@ -448,20 +448,9 @@
 - project:
    name: Git Ignore editor
    pData:
-    pInDev: yes
+    pInDev: no
     pStatus: Mostly done.
    languages:
-    - text: C#
-    
-- project:
-   name: Unity Car shooter Game
-   pData:
-    pInDev: yes
-    pStatus: Just started.
-   smallDesc: A test for a dynamic camera that can go from the main menu and transition to gameplay.<br>
-    It uses a car/AI system I made a few months back 
-   languages:
-    - text: Unity
     - text: C#
     
 - project:
@@ -470,7 +459,7 @@
    smallDesc: Turns Xbox and ps4 controller input into a common format which can be included into Unity<br>
     can deal with adding and removing controller better than Unity implementation.
    pData:
-    pInDev: yes
+    pInDev: no
     pStatus: Working DLL, with unity implementation.<br>
      Going to rewrite it to use HID instead.
    languages:
