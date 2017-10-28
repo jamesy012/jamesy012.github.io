@@ -182,11 +182,13 @@
 - project:
    name: OpenGL Engine - Millard
    altName: New OpenGL engine
+   smallDesc: A rewrite of my OpenGL engine I wrote for my graphics assessment with AIE 
    pData:
     pName: MillardEngine
     pPath: opengl/openglEngine
     pInDev: yes
     pStatus: Implementing basics.
+
    description: 
     A rewrite of my last engine currently missing a lot of features compared to the old one.<br>
     I named it Millard because I like ducks :)<br>
@@ -245,7 +247,7 @@
       desc: video demonstrating the program
 
 - project:
-   name: Grow - Game jam (Aie)
+   name: Grow - Game jam (AIE)
    pData:
     pName: AieGameJamGrow
     pPath: gamejams/aie_Grow
@@ -447,6 +449,7 @@
       
 - project:
    name: Git Ignore editor
+   smallDesc: A simple editor for modifying a .gitignore file, shows which files will be included and excluded. and allows a easy way to allow or exclude files or folder
    pData:
     pInDev: no
     pStatus: Mostly done.
@@ -480,8 +483,18 @@
    smallDesc: Game for the Major production unit at AIE, currently working on the prototype as the only programmer
    pData:
     pInDev: yes
-    pStatus: Working prototype.
+    pStatus: Last few weeks. Should be done by late november.
    languages:
     - text: Unity
     - text: C#
+     
+- project:
+   name: Halite.io 2, AI challenge 
+   smallDesc: Programming/AI Challenge where users create AI for a game and your bot faces off against other peoples bots <a href="https://halite.io/">https://halite.io/</a>
+   pData:
+    pInDev: yes
+    pStatus: Currently improving my bot
+   languages:
+    - text: C++
+     
      

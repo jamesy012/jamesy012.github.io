@@ -19,13 +19,16 @@ layout: default
         {% for project in site.data.projects %}
             {% if project.project.pData.pInDev %}
                 <tr>
-                    <th style="width:40%;text-align: left">
-                        {{project.project.altName | default: project.project.name}}
-                    </th>
-                    <th style="width:40px;">
+                    <th style="width:26%;text-align: left">
+                        {% assign projName = project.project.altName | default: project.project.name %}
+                        
                         {% if project.project.pData.pPath %}
-                            <a href="/pages/Projects/{{project.project.pData.pPath}}.html">Link</a>
-                        {% endif %}   
+                            <a href="/pages/Projects/{{project.project.pData.pPath}}.html">
+                                {{projName}}
+                            </a>
+                        {% else %}
+                            {{projName}}
+                        {% endif %}  
                     </th>
                     <th style="width:40px;">
                             {{ project.project.languages[0].text }}
@@ -36,7 +39,6 @@ layout: default
                         {% endif %}   
                     </th>
                 </tr>   
-                <!-- Empty row -->
                 <tr>
                     <th style="height:5px;">
                     </th>
@@ -44,51 +46,45 @@ layout: default
             {% endif %}
         {% endfor %}
     </table>
-    <!--
-    <ul>     
-        {% for project in site.data.projects %}
-            {% if project.project.pData.pInDev %}
-            <li>
-                {{project.project.altName | default: project.project.name}}:
-                    {% if project.project.pData.pPath %}
-                        <a href="/pages/Projects/{{project.project.pData.pPath}}.html">Link</a>
-                    {% endif %}                    
-                    {% if project.project.pData.pStatus %}
-                        <ul> 
-                            Status: {{project.project.pData.pStatus}}
-                        </ul>
-                    {% endif %}                 
-            </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-    -->
+
     <br>
     <h2 class="removePadding">List of all projects:</h2>
     <br>
     <div id="ProjectList">
         {% assign langList = site.data.languages | sort: 'lang' %}
         {% for language in langList %}
+        {% assign isFirst =  'true' %}
         <h2 class="removePadding">{{language.lang}}:</h2>
         <table>
             {% for project in site.data.projects %}
                 {% if project.project.languages[0].text == language.lang %}
-
+           
+                    {% if isFirst == 'false' %}
+                        <tr>
+                            <th style="height:10px;">
+                            </th>
+                        </tr>
+                    {% endif %}
+                    {% assign isFirst =  'false' %}
+            
                     <tr>
-                        <th style="width:25%;text-align: left">
+                        <th style="width:26%;text-align: left">
                             {% assign projName = project.project.altName | default: project.project.name %}
+                            
                             {% if project.project.pData.pGameJam %}
-                                {{projName}} (Game Jam)
+                                {% assign isGameJam = '(Game Jam)' %}
                             {% else %}
-                                {{projName}}
+                                {% assign isGameJam = '' %}
+                            {% endif %} 
+                            
+                            {% if project.project.pData.pPath %}        
+                                <a href="/pages/Projects/{{project.project.pData.pPath}}.html">
+                                    {{projName}} {{isGameJam}}
+                                </a>    
+                            {% else %}
+                                {{projName}} {{isGameJam}}
                             {% endif %}
-                        </th>
-                        <th style="width:5%;">
-                        {% if project.project.pData.pPath %}                            
-                                {% if project.project.pData.pPath %}
-                                    <a href="/pages/Projects/{{project.project.pData.pPath}}.html">Link</a>
-                                {% endif %}                            
-                        {% endif %}
+                            
                         </th>
                         <th>
                             {% if project.project.smallDesc %}
@@ -96,11 +92,7 @@ layout: default
                             {% endif %}
                         </th>
                     </tr>
-                    <!-- Empty row -->
-                    <tr>
-                        <th style="height:5px;">
-                        </th>
-                    </tr>
+
                 {% endif %}
             {% endfor %}
         </table>

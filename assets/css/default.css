@@ -68,6 +68,7 @@ p, h2, h3 {
 
 .removePadding {
     padding: initial;
+    padding-top: 20px;
 }
 
 table {
@@ -167,3 +168,24 @@ footer hr{
 }
 
 /* DARK MODE END */
+
+
+.topInfoBar {
+    margin: 0 auto;
+    width: 40%;
+    padding-left: 30%;  
+    padding-right: 30%;
+    padding-top: 1rem;    
+    padding-bottom: 1rem;
+
+    text-shadow: 0 0 0;
+    
+    /*background-color: white;
+    color: black;*/
+    
+    overflow:auto;
+    
+    background-image:url(/assets/images/site/fadeIn2.png);
+    background-position: 0px;
+    background-size: contain;
+}

@@ -35,7 +35,7 @@ table {
 }
 
 div #Description {
-    overflow:auto;
+    overflow:hidden;
 }
 
 div #LdScore {
