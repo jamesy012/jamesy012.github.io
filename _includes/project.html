@@ -55,7 +55,7 @@
                  <h2> Links: </h2>
                  <ul>
                      {% for item in currProject.links %}
-                         <li>{{ item.text }}: <a href="{{item.url}}">Link.</a></li>
+                         <li><a href="{{item.url}}">{{ item.text }}</a></li>
                      {% endfor %}
                  </ul>
             
@@ -67,7 +67,7 @@
                  <h2> Other: </h2>
                  <ul>
                      {% for item in currProject.other %}
-                         <li>{{ item.text }}: <a href="/pages/Projects/{{item.url}}">Link.</a></li>
+                         <li><a href="/pages/Projects/{{item.url}}">{{ item.text }}</a></li>
                      {% endfor %}
                  </ul>             
             </div>
@@ -146,9 +146,10 @@
                     {% for item in item.contrib %}
                         <ul>
                             <li>
-                                {{item.name}}:
                                 {% if item.url | default:blank != blank %}
-                                    <a href="{{item.url}}">Link.</a>
+                                    <a href="{{item.url}}">{{item.name}}</a>
+				{% else %}
+				    {{item.name}}
                                 {% endif %}
                             </li>
                         </ul>
