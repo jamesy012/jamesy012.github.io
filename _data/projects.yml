@@ -187,26 +187,36 @@
     pName: MillardEngine
     pPath: opengl/openglEngine
     pInDev: yes
-    pStatus: Implementing basics.
+    pStatus: Making a demo side shooter game for a industry showcase in this
 
    description: 
     A rewrite of my last engine currently missing a lot of features compared to the old one.<br>
     I named it Millard because I like ducks :)<br>
-    Currently working on this, Since I have an example from my last engine, this one should be structured a lot better<br>
+    Based off my last engine, this one will be structured a lot better since I have a better idea on what certin aspects do.<br>
     <br>
-    Very early on, so no screenshots for the moment.<br>
-    Currently only has
+    It is currently very early on.<br>
+    Currently has
     <ul>
         <li>Texture loading(stb_image)</li>
         <li>Model loading(Assimp)</li>
         <li>Text rendering(stb_truetype)</li>
         <li>A resource maanager that deals with files loaded from disk</li>
         <li>A local version of shader uniform values with a easy way to modify and set the data</li>
+        <li>Framebuffer creator/manager</li>
+        <li>Transform/object system</li>
+        <li>Camera, othographic/perspective</li>
     </ul>
     There is a list of features I would like to add that I am keeping track with a trello board 
    links:
     - text: Source code
       url: https://github.com/jamesy012/Mallard-OpenGL-Engine
+   images:
+    - loc: MillardEngine/SideShooter1.png
+      alt: Screenshot of the sideshooter project
+      desc: The side shooter demo contains Depth of field, reflections and shadows 
+    - loc: MillardEngine/SideShooter2.gif
+      alt: gif of the side shooter ship moving up and down
+      desc: A gif of the side shooter project, with an idle ship. This shows off the reflection off the pond
    languages:
     - text: C++
     - text: GLSL
@@ -482,7 +492,7 @@
    name: Bullet Ballet (AIE)
    smallDesc: Game for the Major production unit at AIE, currently working on the prototype as the only programmer
    pData:
-    pInDev: yes
+    pInDev: no
     pStatus: Last few weeks. Should be done by late november.
    languages:
     - text: Unity
@@ -493,7 +503,7 @@
    smallDesc: Programming/AI Challenge where users create AI for a game and your bot faces off against other peoples bots <a href="https://halite.io/">https://halite.io/</a>
    pData:
     pInDev: yes
-    pStatus: Currently improving my bot
+    pStatus: <a href="https://halite.io/user/?user_id=1337">Currently improving my bot</a>
    languages:
     - text: C++
      
