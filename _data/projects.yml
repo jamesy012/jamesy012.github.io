@@ -524,12 +524,12 @@
     - text: Download (windows)
       url: https://lachlanmorrow.itch.io/bullet-ballet
    images:
-    - loc: unity/bulletBallet_2.gif
+    - loc: Unity/BulletBallet_2.gif
       alt: gif of gameplay
       desc: basic gameplay loop
-    - loc: unity/bulletBallet_3.png
+    - loc: Unity/BulletBallet_3.png
       alt: screenshot of a level
-    - loc: unity/bulletBallet_4.png
+    - loc: Unity/BulletBallet_4.png
       alt: screenshot of gameplay
    contributors:
     - taskName: Designers
