@@ -180,7 +180,7 @@
       url: opengl\AieEngine\lua
       
 - project:
-   name: OpenGL Engine - Millard
+   name: Millard OpenGL Engine
    altName: New OpenGL engine
    smallDesc: A rewrite of my OpenGL engine I wrote for my graphics assessment with AIE 
    pData:
@@ -211,12 +211,12 @@
     - text: Source code
       url: https://github.com/jamesy012/Mallard-OpenGL-Engine
    images:
-    - loc: MillardEngine/SideShooter1.png
-      alt: Screenshot of the sideshooter project
-      desc: The side shooter demo contains Depth of field, reflections and shadows 
     - loc: MillardEngine/SideShooter2.gif
       alt: gif of the side shooter ship moving up and down
       desc: A gif of the side shooter project, with an idle ship. This shows off the reflection off the pond
+    - loc: MillardEngine/SideShooter1.png
+      alt: Screenshot of the sideshooter project
+      desc: The side shooter demo contains Depth of field, reflections and shadows 
    languages:
     - text: C++
     - text: GLSL
@@ -489,11 +489,69 @@
     - text: Java (Android)
     
 - project:
-   name: Bullet Ballet (AIE)
-   smallDesc: Game for the Major production unit at AIE, currently working on the prototype as the only programmer
+   name: Bullet Ballet (AIE) - Major Project
+   altName: Bullet Ballet (AIE)
+   smallDesc: Game for the Major production unit at AIE, Plan the movement then use both sticks
    pData:
-    pInDev: no
-    pStatus: Last few weeks. Should be done by late november.
+    pName: BulletBallet
+    pPath: Unity/BulletBallet
+   description: >
+    Bullet Ballet is a A 3-D single player, top down, flow driven, twin stick shooter inspired by over the top action movies like The Matrix and games like Max Payne, Door Kickers and Stranglehold.<br>   
+    <p>
+        as a group we worked on this game for around 4-5 months, going though alpha, beta and gold.
+    </p>   
+    <p>
+        Requies a controller to play.<br>   
+        What I did:
+        <ul>
+            <li>I wrote the input dll (allows for ds4 and xbox controllers to be treated the same)</li>
+            <li>Player Arm controller</li>
+            <li>Player Movement controller</li>
+            <li>Player animations</li>
+            <li>Fog system</li>
+            <li>Enemy AI</li>
+            <li>Slowmo system</li>
+            <li>Weapon handling/bullet system</li>
+            <li>Dash/Dive system</li>
+        </ul>
+    </p>
+   languages:
+    - text: Unity
+    - text: C#
+   links:
+    - text: Project/Source
+      url: https://github.com/LachlanRMMorrow/Bullet-Ballet-Unity-Project
+    - text: Download (windows)
+      url: https://lachlanmorrow.itch.io/bullet-ballet
+   images:
+    - loc: unity/bulletBallet_2.gif
+      alt: gif of gameplay
+      desc: basic gameplay loop
+    - loc: unity/bulletBallet_3.png
+      alt: screenshot of a level
+    - loc: unity/bulletBallet_4.png
+      alt: screenshot of gameplay
+   contributors:
+    - taskName: Designers
+      contrib:
+      - name: Lachlan Morrow
+      - name: James Carroll
+      - name: Dimitri Paspaliaris
+    - taskName: Artists
+      contrib:
+      - name: Beaudean Brown
+      - name: James Tracy
+    - taskName: Other Programmers
+      contrib:
+      - name: Addison Stewart
+    - taskName: Audio
+      contrib:
+      - name: Mark Allen
+        
+- project:
+   name: IISRI Flaim project
+   smallDesc: Worked on this Rnd project with IISRI and others from AIE using the HTC VIVE.<br>
+    I worked on a foam simulation within unity.
    languages:
     - text: Unity
     - text: C#
@@ -506,5 +564,54 @@
     pStatus: <a href="https://halite.io/user/?user_id=1337">Currently improving my bot</a>
    languages:
     - text: C++
+    
+- project:
+   name: Ludum dare 40 - Hoarder Disorder
+   altName: Ludum dare 40 - The more you have the worse it is
+   pData:
+    pName: LD40
+    pPath: gamejams/ludumDare40
+    pGameJam: yes
+   smallDesc: Find and deliver items which are hidden under a pile of other items!
+   description: >
+    LD40 theme: The more you have the worse it is.
+    <p>The game I made in 48 hours by myself for the ludum dare compo.<br>
+        I had alot of fun bring out my graphics tablet and drawing all the paintings and objects.<br>
+        Going into this project I was going to create a 2d game since my last project, Bullet Ballet was a 3d game.<br>
+        Overall I found the graphics to still be lacking and an aspect I will need to work on.<br>
+    </p>
+    <p>
+        To fit the theme the idea was to keep adding objects into the room, and having the player find a certin object, being the more items you have the harder 
+    </p>
+    <p>
+        Currently the scores are still being calulated.
+    </p>
+   links:
+    - text: Project/Source
+      url: https://github.com/jamesy012/LudumDare-40
+    - text: Download (windows)
+      url: https://drive.google.com/open?id=1H6iNKtMw5hFy0223ZQi1ysatrpXAcAYF
+    - text: Web build (Can play in browser)
+      url: https://jamesy012.itch.io/hoder-disorder
+    - text: Ludum Dare page
+      url: https://ldjam.com/events/ludum-dare/40/hoarder-disorder
+   languages:
+    - text: Unity
+    - text: C#
+   images:
+    - loc: gamejams/ldjam40_1.gif
+      alt: gif of gameplay
+      desc: basic gameplay loop
+    - loc: gamejams/ldjam40_2.png
+      alt: screenshot of gameplay
+   videos:
+    - url: OuePifd2xPs
+      type: youtube
+      desc: gameplay
+   other:
+    - text: Ludum Dare 37
+      url: gamejams/ludumDare37
+    - text: Ludum Dare 38
+      url: gamejams/ludumDare38
      
      

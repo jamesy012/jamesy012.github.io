@@ -35,6 +35,11 @@ img.DuckImage {
     margin-top: -8px;
 }
 
+a.DuckImage{
+    width: 50px;
+    height: 23px;
+}
+
 
 table, th, td {
     padding: 2px;
