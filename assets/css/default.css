@@ -1,17 +1,23 @@
 a.button {
-	width: unset;
-	text-align: left;
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    float:none;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
 a.button span {
-	padding-left: 5px;
-	padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-a.image span {
-	padding-left: 50px; /* from the default theme */
-	padding-right: default;
+#view-on-github span {
+    padding-left: 30px;
+    background-position: 0px;
+    /* from the default theme */
+    padding-right: default;
 }
 
 h3 {
@@ -24,8 +30,11 @@ footer {
 
 #view-on-github {
     margin-right: 14px;
-    }
+}
 
+#Links {
+    display: block;
+}
 
 img.DuckImage {
     position: absolute;
@@ -35,15 +44,17 @@ img.DuckImage {
     margin-top: -8px;
 }
 
-a.DuckImage{
+a.DuckImage {
     width: 50px;
     height: 23px;
 }
 
 
-table, th, td {
+table,
+th,
+td {
     padding: 2px;
-	table-layout: fixed;
+    table-layout: fixed;
     width: 100%;
     border-spacing: 2px;
 }
@@ -66,7 +77,9 @@ ul {
 }
 
 
-p, h2, h3 {
+p,
+h2,
+h3 {
     padding-left: 1em;
     margin-bottom: 10px;
 }
@@ -82,7 +95,9 @@ table {
 
 
 /* DARK MODE */
+
 body {
+    
     background-image: url(/assets/images/site/bg.png);
     background-position: 0px;
     background-size: initial;
@@ -92,11 +107,21 @@ body {
     background-clip: initial;
     background-color: rgb(34, 34, 34);
     
-    text-shadow: 0 0 30px rgba(0,0,0,0.8);
+    /*
+    background-image: url(/assets/images/site/bg2.png);
+    background-size: 256px 256px;
+    */
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
     color: #D3D3D3;
 }
 
-h1, h2, h3, h4, h5, h6, header h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header h1 {
     color: #569AFF;
 }
 
@@ -121,20 +146,20 @@ hr {
     background-origin: initial;
     background-clip: initial;
     background-color: transparent;
-    
+
 
     overflow-x: hidden;
 }
 
 a.button {
-    background-image: initial;   
+    background-image: initial;
     background-position: 50% 0px;
     background-size: initial;
     background-repeat: no-repeat;
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
-    
+
     background-color: #202020;
     border: solid 2px #555555;
     border-top-color: #4D4D4D;
@@ -143,14 +168,14 @@ a.button {
 }
 
 a.button:hover {
-    background-image: initial;   
+    background-image: initial;
     background-position: 50% 0px;
     background-size: initial;
     background-repeat: no-repeat;
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
-    
+
     background-color: #2A2A2A;
     border: solid 2px #555555;
     border-top-color: #4D4D4D;
@@ -158,43 +183,42 @@ a.button:hover {
 }
 
 
-a.button span{
+a.button span {
     color: #D3D3D3;
 }
 
 footer {
     background: initial;
-    
+
 }
-footer hr{
-    position:relative;
+
+footer hr {
+    position: relative;
     margin-bottom: -20px;
     top: -25px;
 }
 
 /* DARK MODE END */
 
-
 .topInfoBar {
     margin: 0 auto;
     width: 40%;
-    padding-left: 30%;  
+    padding-left: 30%;
     padding-right: 30%;
-    padding-top: 1rem;    
+    padding-top: 1rem;
     padding-bottom: 1rem;
 
     text-shadow: 0 0 0;
-    
+
     /*background-color: white;
     color: black;*/
-    
-    overflow:auto;
-    
-    background-image:url(/assets/images/site/fadeIn2.png);
+    overflow: auto;
+
+    background-image: url(/assets/images/site/fadeIn2.png);
     background-position: 0px;
     background-size: contain;
 }
 
 a {
-	color: green;
+    color: green;
 }
