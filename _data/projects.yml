@@ -221,6 +221,10 @@
     - text: C++
     - text: GLSL
     - text: OpenGL
+   videos:
+    - url: ne7IpB4H-74
+      type: youtube
+      desc: Demo of my sideshooter project
    other:
     - text: Old OpenGL engine
       url: opengl\AieEngine\graphics
