@@ -17,11 +17,6 @@
 <body>
     <div id="container">
 
-        <div class="topInfoBar">
-            <center>
-                <a href="https://drive.google.com/open?id=1xmZofo5-0UlRAShQ63FVs2Pxb77jzts5QyOj1GucbDg" target="_blank">Please give some feedback about the website here.</a>
-            </center>
-        </div>
 
         <div class="inner">
 
@@ -31,24 +26,28 @@
                 <h2>{{ site.description | default: site.github.project_tagline }}</h2>
             </header>
             <section class="clearfix">
-<center>
-<div id="Links" >
-                    <a href="/" class="button"><span>Home</span></a>
-                    <a href="/pages/Projects/projects.html" class="button"><span>Projects</span></a>
-                    <a href="/aboutMe.html" class="button"><span>About</span></a>
-                    <!--<a href="/pages/Projects/projects.html" class="button"><span>Blog</span></a>-->
-                    <a href="https://github.com/{{ site.github_username }}" id="view-on-github" class="button image"><span>GitHub</span></a>
-                    <!--
+                <center>
+                    <div id="Links">
+                        <a href="/" class="button"><span>Home</span></a>
+                        <a href="/pages/Projects/projects.html" class="button"><span>Projects</span></a>
+                        <a href="/aboutMe.html" class="button"><span>About</span></a>
+                        <!--<a href="/pages/Projects/projects.html" class="button"><span>Blog</span></a>-->
+                        <a href="https://github.com/{{ site.github_username }}" id="view-on-github" class="button image"><span>GitHub</span></a>
+                        <!--
                     <a href="/pages/Other/Birds.html" class="button image DuckImage">
                         <img src="/assets/images/ducks/small%20duck.png" class="DuckImage">
                     </a>
                     -->
-    </div>
-</center>
+                    </div>
+                </center>
             </section>
 
-            <hr>
+            <br>
+            <center>
+                <a href="https://drive.google.com/open?id=1xmZofo5-0UlRAShQ63FVs2Pxb77jzts5QyOj1GucbDg" target="_blank">Please give some feedback about the website here.</a>
+            </center>
 
+            <hr>
 
             <section id="main_content">
                 {{ content }}

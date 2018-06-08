@@ -72,8 +72,11 @@ ul {
     /*
     border: 2px solid rgba(0,0,0,0.1);
     border-top-style: none;
+
+        width: 750px;
+
     */
-    width: 750px;
+width: 800px;
 }
 
 
@@ -97,7 +100,7 @@ table {
 /* DARK MODE */
 
 body {
-    
+    /*
     background-image: url(/assets/images/site/bg.png);
     background-position: 0px;
     background-size: initial;
@@ -106,6 +109,9 @@ body {
     background-origin: initial;
     background-clip: initial;
     background-color: rgb(34, 34, 34);
+    */
+background: rgb(17,17,17);
+background: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(17,17,17,1) 100%);
     
     /*
     background-image: url(/assets/images/site/bg2.png);
@@ -127,6 +133,8 @@ header h1 {
 
 
 #container {
+ background: transparent;
+    /*
     background-image: url(/assets/images/site/bg-top.png);
     background-position: 50% 0px;
     background-size: initial;
@@ -135,6 +143,7 @@ header h1 {
     background-origin: initial;
     background-clip: initial;
     background-color: transparent;
+*/
 }
 
 hr {
